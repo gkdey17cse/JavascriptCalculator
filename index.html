@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- bg-gradient-to-r from-amber-200 from-10% via-amber-400 via-30% to-emerald-500 to-90% -->
+
+<body class="mx-auto container flex flex-col justify-center items-center">
+    <!-- Heading Section -->
+    <h1 class="text-5xl font-semibold text-gray-800 mt-8" style="font-family: 'Oswald', sans-serif;"><span
+            class="text-transparent bg-clip-text  
+        bg-gradient-to-r from-indigo-700 from-10% via-slate-600 via-30% to-blue-800 to-90% tracking-wider">JAVASCRIPT</span>
+        Calculator</h1>
+    <!-- Heading Section End -->
+
+    <div class="container flex flex-row items-center justify-center py-2 px-1 my-1 mt-16 lg:mt-4">
+        <img class="hidden lg:block col-span-2 w-3/5" src="./src/bg1.jpg" alt="">
+        <!-- Calculator Section -->
+        <div class="container mx-auto w-auto px-2 rounded-tr-3xl rounded-bl-3xl shadow-lg"
+            style="background-color: #3e187a; background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%); vertical-align:middle;">
+            <!-- Calculator Section -->
+            <div class="w-full px-3 py-8" style="font-family: 'Roboto', sans-serif;">
+                <!-- Input Section -->
+                <input type="text" id="display"
+                    class="display block text-right w-full px-4 py-6 my-2 mt-2 mb-4 text-gray-900 shadow-sm rounded-lg bg-white text-3xl font-semibold">
+                <!-- Input Section End-->
+
+                <!-- Button Section Row1 -->
+                <div class="buttons grid grid-cols-4 gap-2 mt-6 font-bold text-2xl">
+                    <button type="button" data-value="AC"
+                        class="operator text-red-500 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-auto py-4 shadow-md">AC</button>
+                    <button type="button" data-value="DEL"
+                        class="operator text-red-500 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-auto py-4 shadow-md">DEL
+                    </button>
+                    <button type="button" data-value="%"
+                        class="operator text-red-500 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">%</button>
+                    <button type="button" data-value="/"
+                        class="operator text-red-500 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">/</button>
+                </div>
+                <!-- Button Section Row1 End -->
+
+                <!-- Button Section Row1 -->
+                <div class="buttons grid grid-cols-4 gap-2 mt-6 font-medium text-2xl">
+                    <button type="button" data-value="7"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">7</button>
+                    <button type="button" data-value="8"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">8</button>
+                    <button type="button" data-value="9"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">9</button>
+                    <button type="button" data-value="*"
+                        class="operator text-red-500 font-bold bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">*</button>
+                </div>
+                <!-- Button Section Row1 End -->
+
+                <!-- Button Section Row1 -->
+                <div class="buttons grid grid-cols-4 gap-2 mt-6 font-medium text-2xl">
+                    <button type="button" data-value="4"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">4</button>
+                    <button type="button" data-value="5"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">5</button>
+                    <button type="button" data-value="6"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">6</button>
+                    <button type="button" data-value="-"
+                        class="operator text-red-500 font-bold bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">-</button>
+                </div>
+                <!-- Button Section Row1 End -->
+
+                <!-- Button Section Row1 -->
+                <div class="buttons grid grid-cols-4 gap-2 mt-6 font-medium text-2xl">
+                    <button type="button" data-value="1"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">1</button>
+                    <button type="button" data-value="2"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">2</button>
+                    <button type="button" data-value="3"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">3</button>
+                    <button type="button" data-value="+"
+                        class="operator text-red-500 font-bold bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">+</button>
+                </div>
+                <!-- Button Section Row1 End -->
+
+                <!-- Button Section Row1 -->
+                <div class="buttons grid grid-cols-4 gap-2 mt-6 font-medium text-2xl">
+                    <button type="button" data-value="0"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">0</button>
+                    <button type="button" data-value="00"
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">00</button>
+                    <button type="button" data-value="."
+                        class="text-gray-900 bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">.</button>
+                    <button type="button" data-value="="
+                        class="operator text-red-500 font-bold bg-white focus:ring-1 focus:ring-yellow-200 hover:bg-teal-100 duration-300 rounded-lg px-5 py-4 shadow-md">=</button>
+                </div>
+                <!-- Button Section Row1 End -->
+            </div>
+
+            <!-- Calculator Section End -->
+        </div>
+        <!-- Calculator Section End -->
+    </div>
+
+    <!-- Copyright Section -->
+    <h5 class="italic mt-6 my-2 py-3"><span>©</span>Gour Krishna Dey</h5>
+    <!-- Copyright Section End -->
+
+    <script>
+        const display = document.querySelector('.display');
+        const buttons = document.querySelectorAll('button');
+        const specialChars = ["%", "*", "+", "-", "/", "="];
+        let output = "";
+        // Define calculate function based on button clicked
+        const calculate = (btnValue) => {
+            if (btnValue === "=" && btnValue !== "") {
+                // If output has % , replace it with /100
+                output = eval(output.replace("%", "/100"));
+            } else if (btnValue === "AC") {
+                output = "";
+            } else if (btnValue === "DEL") {
+                output = output.toString().slice(0, -1);
+            } else {
+                if (output === "" && specialChars.includes(btnValue)) return;
+                output = output + btnValue;
+            }
+            display.value = output;
+        }
+
+        // Add Event Listener in Buttons , call calculate() on click
+        buttons.forEach(button => {
+            // Button click listener call calculate() with dataset value as argument
+            button.addEventListener('click', (e) => calculate(e.target.dataset.value));
+        })
+    </script>
+</body>
+
+</html>
